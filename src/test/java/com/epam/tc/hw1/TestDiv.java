@@ -7,19 +7,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class TestDiv {
-
-    Calculator calculator = new Calculator();
-
-    @BeforeMethod(alwaysRun = true)
-    public void setUp() {
-        //Do some stuff
-    }
-
-    @AfterMethod(alwaysRun = true)
-    public void tearDown() {
-        //Undo the stuff
-    }
+public class TestDiv extends TestInitialize {
 
     @Test(dataProviderClass = DataProviders.class, dataProvider = "divLong", groups = {"MultDiv"})
     public void testDivLong(long a, long b, long expected) {

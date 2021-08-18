@@ -7,19 +7,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class TestSum {
-
-    Calculator calculator = new Calculator();
-
-    @BeforeMethod(alwaysRun = true)
-    public void setUp() {
-        //Do some stuff
-    }
-
-    @AfterMethod(alwaysRun = true)
-    public void tearDown() {
-        //Undo the stuff
-    }
+public class TestSum extends TestInitialize {
 
     @Test(dataProviderClass = DataProviders.class, dataProvider = "sumLong", groups = {"SumSub"})
     public void testSumLong(long a, long b, long expected) {
@@ -35,5 +23,6 @@ public class TestSum {
         assertThat(actual)
                 .as("Something went wrong when summing double values")
                 .isEqualTo(expected);
+        //System.out.println("Sum...body once tod me");
     }
 }

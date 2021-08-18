@@ -11,7 +11,7 @@ public class DataProviders {
 
     @DataProvider(name = "sumDouble")
     public static Object[][] sumDouble() {
-        return new Object[][]{{4.0, 5.0, 9.0}, {-4, 5, 1}, {3.2, 2.7, 5.9}, {-5.2, 5.2, 0}, {-6.67, -3.32, -9.9}};
+        return new Object[][]{{4.0, 5.0, 9.0}, {-4, 5, 1}, {3.2, 2.7, 5.9}, {-5.2, 5.2, 0}, {-6.67, -3.32, -9.99}};
     }
 
     @DataProvider(name = "subLong")
