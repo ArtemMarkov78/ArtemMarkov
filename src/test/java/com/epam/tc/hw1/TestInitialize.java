@@ -6,7 +6,7 @@ import org.testng.annotations.BeforeClass;
 public class TestInitialize {
     protected Calculator calculator;
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void setUp() {
         calculator = new Calculator();
     }
